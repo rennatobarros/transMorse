@@ -17,8 +17,8 @@ void pttomorse(string pttext, string morse[], char alphabet[]){
             }
         }
     }
-    cout << "TEXT: " << pttext << endl;
-    cout << "MORSE CODE: " << temp << endl;
+    cout << "Texto digitado: " << pttext << endl;
+    cout << "Texto traduzido: " << temp << endl;
 }
 
 //string morsetopt(){
