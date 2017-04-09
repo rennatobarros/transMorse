@@ -1,7 +1,8 @@
 #include <cstdlib>
 #include <iostream>
+#include <algorithm>
 #include <string>
-#include "libs/functions.hpp"
+#include "libs/functions.cpp"
 
 int main(void)
 {
@@ -17,7 +18,10 @@ int main(void)
 
         if(option == '1'){
             cout << "Digite o texto para ser traduzido em Morse: " << endl;
-            //pttomorse();
+            cin.get();
+            getline(cin, pttext);
+            //cout << pttext << endl;
+            pttomorse(pttext, morse, alphabet);
         }else if(option == '2'){
             cout << "Digite o nome arquivo que será traduzido para português: " << endl;
             cin >> file;
