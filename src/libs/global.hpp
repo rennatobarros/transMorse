@@ -1,13 +1,17 @@
 using namespace std;
 
-int i;
+int i, j; // Iteradores padrão
 
-int j;
+// Array de char com todo o alfabeto e os números decimais.
+char alphabet[36] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P',
+                    'Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6',
+                    '7','8','9','0'};
 
-char alfabeto[26]   = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+// Array de string com todo o alfabeto e os números decimais.
+string morse[36] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", 
+                    "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..",
+                    ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----"};
 
-//string morse[26]    = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
-
-//string ptText;
+string pttext; //String que recebe o texto em PT a ser traduzido.
 
 //string morseText;
