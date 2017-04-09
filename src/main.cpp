@@ -26,6 +26,10 @@ int main(void)
             cout << "Digite o nome arquivo que será traduzido para português: " << endl;
             cin >> file;
             //morsetopt(file);
+        }else{
+            cout << "Oops!!! Opção inválida. Tente novamente..." << endl;
+            cout << "Digite '1' para traduzir de português em código Morse.\nDigite '2' para traduzir de código Morse em português." << std::endl;
+            cin >> option;
         }
 
         cout << "Gostaria de fazer outra tradução? '1' para continuar e '0' para sair. ";
