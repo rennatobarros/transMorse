@@ -1,14 +1,16 @@
 #include "global.hpp"
 
 void pttomorse(string pttext, string morse[], char alphabet[]){
-    ofstream myfile;
+    int i, j;
+    
+    ofstream myfile;// Arquivo a ser gerado.
     int length = pttext.length();
     string temp = ""; // String temporária para amarzenar o código traduzido.
     
-    // Converte toda a string em letras minusculas
+    // Converte toda a string em letras minusculas.
     transform(pttext.begin(), pttext.end(), pttext.begin(), ::toupper);
 
-    
+    // Percorre cada letra da string recebida e faz a tradução.
     for(i = 0; i < length; i++){
         for(j = 0; j < 36; j++){
             if(pttext[i] == alphabet[j]){
@@ -23,27 +25,29 @@ void pttomorse(string pttext, string morse[], char alphabet[]){
     myfile.open("MorseCode.txt");
     myfile << temp << endl;
     myfile.close();
+    cout << "Arquivo 'MorseCode.txt' gerado!!!!" << endl;
     cout << "Tradução finalizada..." << endl;
     
 }
 
 void morsetopt(char file[], string morse[], char alphabet[]){
-    int index = 0;
-    
-    ifstream myfile;
+    ifstream myfile;// Arquivo a ser lido.
     myfile.open(strcat(file, ".txt"));
-    
+
+    // Variáveis para manipular o texto.
     string temp = "";
     string text = "";
+    
+    int index;// Variável de controle.
 
     if(myfile.is_open()){
         while(!myfile.eof()){
-            getline(myfile,temp);
+            getline(myfile,temp); // Variável temp recebe o texto do arquivo.
             int length = temp.length();
-            cout << temp;
+            //cout << temp;
 
-            while(index < length){
-                // Procura pela atual letra em morse
+            for(index = 0; index < length; index++){
+                // Procura pela atual letra em morse.
                 string letter = "";
                 while(temp[index] != ' ' && index < length){
                     letter += temp[index++];
@@ -54,14 +58,14 @@ void morsetopt(char file[], string morse[], char alphabet[]){
                 while(morse[position] != letter && position < 36){
                     position++;
                 }
-                text += 'A' + position;
+                text += alphabet[index] + position;
                 index++;
             }
         }
     }
-    cout << text << endl;
-    //cout << endl;
     myfile.close();
+    cout << "Seu arquivo traduzido é: " << endl;
+    cout << text << endl;
     
 }
 
