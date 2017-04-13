@@ -3,7 +3,8 @@
 
 void  clear_screen  ();
 
-void  pttomorse     (string, string[], char[]);
+void pttomorse      (string, string[], char[]);
+void morsetopt      (char[], string[], char[]);
 
 
 #endif

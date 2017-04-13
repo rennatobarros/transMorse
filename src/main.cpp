@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <cstring>
 #include <fstream>
 #include "libs/functions.cpp"
 
@@ -26,9 +27,9 @@ int main(void)
                 pttomorse(pttext, morse, alphabet);
                 break;
             case 2:
-                cout << "Digite o nome arquivo que será traduzido para português: " << endl;
+                cout << "Digite o nome arquivo que será traduzido para português (sem extensão): " << endl;
                 cin >> file;
-                //morsetopt(file);
+                morsetopt(file, morse, alphabet);
                 break;
             default:
                 cout << "Oops!!! Opção inválida. Tente novamente..." << endl;

@@ -1,9 +1,9 @@
 #include "global.hpp"
 
 void pttomorse(string pttext, string morse[], char alphabet[]){
-    ofstream file;
+    ofstream myfile;
     int length = pttext.length();
-    string temp = " "; // String temporária para amarzenar o código traduzido.
+    string temp = ""; // String temporária para amarzenar o código traduzido.
     
     // Converte toda a string em letras minusculas
     transform(pttext.begin(), pttext.end(), pttext.begin(), ::toupper);
@@ -20,15 +20,50 @@ void pttomorse(string pttext, string morse[], char alphabet[]){
     }
     //cout << "Texto digitado: " << pttext << endl;
     //cout << "Texto traduzido: " << temp << endl;
-    file.open("MorseCode.txt");
-    file << "Texto traduzido: " << temp << endl;
-    file.close();
+    myfile.open("MorseCode.txt");
+    myfile << temp << endl;
+    myfile.close();
+    cout << "Tradução finalizada..." << endl;
     
 }
 
-//string morsetopt(){
+void morsetopt(char file[], string morse[], char alphabet[]){
+    int index = 0;
+    
+    ifstream myfile;
+    myfile.open(strcat(file, ".txt"));
+    
+    string temp = "";
+    string text = "";
 
-//}
+    if(myfile.is_open()){
+        while(!myfile.eof()){
+            getline(myfile,temp);
+            int length = temp.length();
+            cout << temp;
+
+            while(index < length){
+                // Procura pela atual letra em morse
+                string letter = "";
+                while(temp[index] != ' ' && index < length){
+                    letter += temp[index++];
+                }
+
+                // Procura pela atual letra no alfabeto morse
+                int position = 0;
+                while(morse[position] != letter && position < 36){
+                    position++;
+                }
+                text += 'A' + position;
+                index++;
+            }
+        }
+    }
+    cout << text << endl;
+    //cout << endl;
+    myfile.close();
+    
+}
 
 void clear_screen(){
     #if defined WIN32
