@@ -2,12 +2,13 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <fstream>
 #include "libs/functions.cpp"
 
 int main(void)
 {
     char file[20];
-    char option;
+    int option;
     int repeat = 1;
 
     do{
@@ -23,14 +24,17 @@ int main(void)
                 getline(cin, pttext);
                 //cout << pttext << endl;
                 pttomorse(pttext, morse, alphabet);
+                break;
             case 2:
                 cout << "Digite o nome arquivo que será traduzido para português: " << endl;
                 cin >> file;
                 //morsetopt(file);
+                break;
             default:
                 cout << "Oops!!! Opção inválida. Tente novamente..." << endl;
                 cout << "Digite '1' para traduzir de português em código Morse.\nDigite '2' para traduzir de código Morse em português." << std::endl;
                 cin >> option;
+                break;
         }
 
         cout << "Gostaria de fazer outra tradução? '1' para continuar e '0' para sair. ";

@@ -1,6 +1,7 @@
 #include "global.hpp"
 
 void pttomorse(string pttext, string morse[], char alphabet[]){
+    ofstream file;
     int length = pttext.length();
     string temp = " "; // String temporária para amarzenar o código traduzido.
     
@@ -17,8 +18,12 @@ void pttomorse(string pttext, string morse[], char alphabet[]){
             }
         }
     }
-    cout << "Texto digitado: " << pttext << endl;
-    cout << "Texto traduzido: " << temp << endl;
+    //cout << "Texto digitado: " << pttext << endl;
+    //cout << "Texto traduzido: " << temp << endl;
+    file.open("MorseCode.txt");
+    file << "Texto traduzido: " << temp << endl;
+    file.close();
+    
 }
 
 //string morsetopt(){
