@@ -8,13 +8,17 @@
 
 int main(void)
 {
-    char file[20];
-    int option;
-    int repeat = 1;
+    char file[20]; // Armazena o arquivo a ser recebido
+    int option; // Armazena a opção de tradução escolhida pelo usuário
+    int repeat = 1; // Variável para controle do laço do menu
 
+    clear_screen();
+
+    cout << "###########################################################" << endl;
+    cout << "               MORSE/PORTUGUESE TRANSLATOR                 " << endl;
+    cout << "###########################################################" << endl;
+    
     do{
-        //clear_screen();
-
         cout << "Digite '1' para traduzir de português em código Morse.\nDigite '2' para traduzir de código Morse em português." << std::endl;
         cin >> option;
 
