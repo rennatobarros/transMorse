@@ -1,3 +1,13 @@
+/** 
+ * \mainpage Tradutor de Morse/Português
+ * \author Renato Barros de Lima Freitas
+ * \date 13/04/2017
+ * \version 1.0
+ *
+ * \file main.cpp
+ * \brief Arquivo principal do programa
+*/
+
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
@@ -6,6 +16,10 @@
 #include <fstream>
 #include "libs/functions.cpp"
 
+/**
+     * \brief Função que executa a principal parte do programa
+     * \return 0
+*/
 int main(void)
 {
     char file[20]; // Armazena o arquivo a ser recebido
@@ -28,11 +42,13 @@ int main(void)
                 cin.get();
                 getline(cin, pttext);
                 //cout << pttext << endl;
+                // Inicia a traduçao para Morse.
                 pttomorse(pttext, morse, alphabet);
                 break;
             case 2:
                 cout << "Digite o nome arquivo que será traduzido para português (sem extensão): " << endl;
                 cin >> file;
+                // Incia a tradução para Português.
                 morsetopt(file, morse, alphabet);
                 break;
             default:

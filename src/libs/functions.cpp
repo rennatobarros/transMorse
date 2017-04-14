@@ -1,4 +1,20 @@
-#include "global.hpp"
+/**
+ *  \file functions.cpp
+ *  \brief Arquivo com as funções essenciais do programa.
+ *
+ */
+
+#include "global.hpp" /** Variáveis globais. */
+
+/** 
+ * Função que traduz de Português para Morse
+ *
+ * \brief Função para traduzir de PT para Morse
+ * @param pttext Texto digitado pelo usuário
+ * @param morse[] Vetor de string com o alfabeto Morse
+ * @param char[] Vetor de char com o alfabeto em Português
+ * \return Nada
+*/
 
 void pttomorse(string pttext, string morse[], char alphabet[]){
     int i, j;
@@ -30,6 +46,17 @@ void pttomorse(string pttext, string morse[], char alphabet[]){
     
 }
 
+
+/** 
+ * Função que traduz de Morse para Português
+ *
+ * \brief Função para traduzir de Morse para PT
+ * @param file[] Nome do arquivo informado pelo usuário
+ * @param morse[] Vetor de string com o alfabeto Morse
+ * @param char[] Vetor de char com o alfabeto em Português
+ * \return Nada
+*/
+
 void morsetopt(char file[], string morse[], char alphabet[]){
     ifstream myfile;// Arquivo a ser lido.
     myfile.open(strcat(file, ".txt"));
@@ -38,7 +65,7 @@ void morsetopt(char file[], string morse[], char alphabet[]){
     string temp = "";
     string text = "";
     
-    int index;// Variável de controle.
+    int index = 0;// Variável de controle.
 
     if(myfile.is_open()){
         while(!myfile.eof()){
@@ -46,7 +73,7 @@ void morsetopt(char file[], string morse[], char alphabet[]){
             int length = temp.length();
             //cout << temp;
 
-            for(index = 0; index < length; index++){
+            while(index < length){
                 // Procura pela atual letra em morse.
                 string letter = "";
                 while(temp[index] != ' ' && index < length){
@@ -58,7 +85,7 @@ void morsetopt(char file[], string morse[], char alphabet[]){
                 while(morse[position] != letter && position < 36){
                     position++;
                 }
-                text += alphabet[index] + position;
+                text += 'A' + position;
                 index++;
             }
         }
@@ -68,6 +95,13 @@ void morsetopt(char file[], string morse[], char alphabet[]){
     cout << text << endl;
     
 }
+/**
+     *  \brief Função para limpar a tela
+     *
+     *  Essa função consegue limpar a tela do console em qualquer SO
+     *
+     *  \return Nada
+     */
 
 void clear_screen(){
     #if defined WIN32
