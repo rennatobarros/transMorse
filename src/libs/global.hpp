@@ -1,3 +1,14 @@
+/** 
+ * \file global.hpp
+ * \brief Arquivo com variáveis globais
+ *
+ * Arquivo com variáveis necessárias em todo o programa.
+ *
+ */
+
+#ifndef __GLOBAL_HPP
+#define __GLOBAL_HPP
+
 using namespace std;
 
 // Array de char com todo o alfabeto e os números decimais.
@@ -11,3 +22,5 @@ string morse[36] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..
                     ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----"};
 
 string pttext; //String que recebe o texto em PT a ser traduzido.
+
+#endif

@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Morse Translator: Referência do Arquivo src/libs/functions.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Morse Translator
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Tradutor de Português/Morse</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_87a455bccb09a92130c26a11a880c98a.html">libs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo functions.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Arquivo com as funções essenciais do programa.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="global_8hpp_source.html">global.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para functions.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="functions_8cpp__incl.png" border="0" usemap="#src_2libs_2functions_8cpp" alt=""/></div>
+<map name="src_2libs_2functions_8cpp" id="src_2libs_2functions_8cpp">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="functions_8cpp__dep__incl.png" border="0" usemap="#src_2libs_2functions_8cppdep" alt=""/></div>
+<map name="src_2libs_2functions_8cppdep" id="src_2libs_2functions_8cppdep">
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a6ec1922ca1423285ebcf0ee75bc14e92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8cpp.html#a6ec1922ca1423285ebcf0ee75bc14e92">pttomorse</a> (string pttext, string morse[], char alphabet[])</td></tr>
+<tr class="memdesc:a6ec1922ca1423285ebcf0ee75bc14e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para traduzir de PT para Morse.  <a href="#a6ec1922ca1423285ebcf0ee75bc14e92">Mais...</a><br /></td></tr>
+<tr class="separator:a6ec1922ca1423285ebcf0ee75bc14e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f898f3fcba5455c258ad347939df54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8cpp.html#a89f898f3fcba5455c258ad347939df54">morsetopt</a> (char file[], string morse[], char alphabet[])</td></tr>
+<tr class="memdesc:a89f898f3fcba5455c258ad347939df54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para traduzir de Morse para PT.  <a href="#a89f898f3fcba5455c258ad347939df54">Mais...</a><br /></td></tr>
+<tr class="separator:a89f898f3fcba5455c258ad347939df54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4953d1edcbbfc7e420c423ded1d5621a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8cpp.html#a4953d1edcbbfc7e420c423ded1d5621a">clear_screen</a> ()</td></tr>
+<tr class="memdesc:a4953d1edcbbfc7e420c423ded1d5621a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para limpar a tela.  <a href="#a4953d1edcbbfc7e420c423ded1d5621a">Mais...</a><br /></td></tr>
+<tr class="separator:a4953d1edcbbfc7e420c423ded1d5621a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Arquivo com as funções essenciais do programa. </p>
+</div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a4953d1edcbbfc7e420c423ded1d5621a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear_screen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para limpar a tela. </p>
+<p>Essa função consegue limpar a tela do console em qualquer SO</p>
+<dl class="section return"><dt>Retorna</dt><dd>Nada </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a89f898f3fcba5455c258ad347939df54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void morsetopt </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>file</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>morse</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>alphabet</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para traduzir de Morse para PT. </p>
+<p>Função que traduz de Morse para Português</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file[]</td><td>Nome do arquivo informado pelo usuário </td></tr>
+    <tr><td class="paramname">morse[]</td><td>Vetor de string com o alfabeto Morse </td></tr>
+    <tr><td class="paramname">char[]</td><td>Vetor de char com o alfabeto em Português </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ec1922ca1423285ebcf0ee75bc14e92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pttomorse </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pttext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>morse</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>alphabet</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para traduzir de PT para Morse. </p>
+<p>Função que traduz de Português para Morse</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pttext</td><td>Texto digitado pelo usuário </td></tr>
+    <tr><td class="paramname">morse[]</td><td>Vetor de string com o alfabeto Morse </td></tr>
+    <tr><td class="paramname">char[]</td><td>Vetor de char com o alfabeto em Português </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
